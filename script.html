@@ -1,0 +1,191 @@
+/start with our standard html construction
+
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1>Your Official Certificate page</h1>
+
+<form action="response7.php" method="GET">
+
+<!now for typing in the page !>
+
+What is your name?
+
+<input type = "text" name="username" size="20"
+
+<input type = "submit" name="submit">
+
+ 
+
+<br>
+
+<br>
+
+ 
+
+Do you deserve your certificate?
+
+ 
+
+<br>
+
+<br>
+
+ 
+
+Select the class you taugt
+
+ 
+
+<!these double <br>s were just a style issue to have a better looking page >
+
+ 
+
+<p>
+
+ 
+
+ 
+
+<!because I had already typed the variable names in full, I just copied pasted them and therefore had the same names as variables.>
+
+ 
+
+<select name= "course"
+
+  <option value="Process Geomorphology">Process Geomorphology</option>
+
+  <option value="Database Mgmt">Database Mgmt</option>
+
+  <option value="Wood Shop">Wood Shop</option>
+
+  <option value="Portuguese">Portuguese</option>
+
+  <option value="Dance">Dance</option>
+
+  <option value="Process geomorphology">Process Geomorphology</option>
+
+  <option value="GIScience">GIScience</option>
+
+</select>
+
+ 
+
+ 
+
+ 
+
+<input type = "submit" name "submit">
+
+ 
+
+ 
+
+ 
+
+<p/>
+
+</form>
+
+ 
+
+ 
+
+</body>
+
+</html
+
+ 
+
+ 
+
+ 
+
+My php script
+
+ 
+
+<html>
+
+<head>
+
+<title>Certificate Processing!</title>
+
+</head>
+
+<style>
+
+  body {background-color:lightgrey}
+
+  h1 {color:blue}
+
+ 
+
+</style>
+
+<body>
+
+ 
+
+//these were some scripts I looked to increase style/appearance
+
+ 
+
+<h1 style= "text-align:center">Official Certificate Form</h1>
+
+<h2 style= "text-align:center"      
+
+ 
+
+<?php
+
+/* this script receives a variable from form.html called username and using
+
+the GET method. Using the POST method would prevent me form seeing the result
+
+in the address bar. */
+
+ 
+
+//under the body header we can manipulate the end cert
+
+ 
+
+//keep it clean and simple
+
+$user = $_GET['username'];
+
+$course=$_GET['course'];
+
+ 
+
+ 
+
+//here i'm trying to have the response go to the users name and their class
+
+ 
+
+///this is a script i tried to center the sub-text...didn't work <h2 style="text-align:center">;
+
+echo "<p> Congratulations $user!</p>";
+
+echo "<p> For your completion of $course </p>";
+
+ 
+
+ 
+
+?>
+
+ 
+
+ 
+
+</form>
+
+</body>
+
+</html>
